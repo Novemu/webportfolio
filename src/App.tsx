@@ -3,6 +3,7 @@ import { Hero } from "./Hero";
 import { NavBar } from "./NavBar";
 import { MySkillsSection } from "./MySkillsSection";
 import GameHubImage from "./SVGImages/gamehub.png";
+import PigDice from "./SVGImages/pigdice.png";
 
 function App() {
   return (
@@ -34,10 +35,9 @@ function MyProjectsSection() {
           projectImage={GameHubImage}
         />
         <ProjectsCard
-          websiteLink="https://anthonysgamehub.netlify.app/"
-          websiteDescription="GameHub: Uses CheapShark API to display and sort game deals from
-          multiple stores."
-          projectImage={GameHubImage}
+          websiteLink="https://novemu.github.io/PigDiceGame/"
+          websiteDescription="Pig Dice: Two player turn based dice game. Roll the dice and first to 100 wins."
+          projectImage={PigDice}
         />
         <ProjectsCard
           websiteLink="https://anthonysgamehub.netlify.app/"
