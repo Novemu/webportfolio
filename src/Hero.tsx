@@ -1,3 +1,5 @@
+import HeaderImage from "./SVGImages/self.png";
+
 export function Hero() {
   return (
     <div className="ml-44 mr-20 flex items-center justify-between">
@@ -25,7 +27,7 @@ export function Hero() {
         </div>
       </div>
       <div>
-        <img src="self.png" alt="self" className="h-auto grayscale" />
+        <img src={HeaderImage} alt="self" className="h-auto grayscale" />
       </div>
     </div>
   );
