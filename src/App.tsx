@@ -3,6 +3,8 @@ import { Hero } from "./Hero";
 import { NavBar } from "./NavBar";
 import { MySkillsSection } from "./MySkillsSection";
 import { MyProjectsSection } from "./MyProjectsSection";
+import { ContactMeSection } from "./ContactMeSection";
+import { ContactForm } from "./ContactForm";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <About />
       <MySkillsSection />
       <MyProjectsSection />
+      <ContactMeSection />
+      <ContactForm />
     </>
   );
 }
