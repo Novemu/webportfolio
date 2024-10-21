@@ -6,35 +6,41 @@ export type HeroProps = {
 
 export function Hero({ scrollToContact }: HeroProps) {
   return (
-    <div className="ml-44 mr-20 flex items-center justify-between">
-      <div className="flex flex-col items-center">
+    <div className="flex flex-col-reverse items-center justify-between lg:ml-44 lg:mr-20 lg:flex-row">
+      <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
         <div>
-          <p className="font-mono text-3xl font-bold text-gray-300">
-            <span className="self-center text-6xl text-orange-300">
+          <p className="font-mono font-bold text-gray-300 md:text-3xl">
+            <span className="mr-2 text-4xl text-orange-300 md:text-6xl">
               Anthony
             </span>
-            <span className="self-center pl-3 text-6xl text-orange-300">
+            <span className="text-4xl text-orange-300 md:text-6xl">
               Gonzalez
             </span>
           </p>
         </div>
 
-        <div className="self-start">
-          <p className="text-3xl font-bold text-gray-300">
+        <div className="mt-2">
+          <p className="text-xl font-bold text-gray-300 sm:text-2xl">
             Front End Web Developer
           </p>
         </div>
-        <div className="self-start">
+
+        <div className="mt-5">
           <button
-            className="mt-5 rounded-md border-4 border-solid border-orange-300 px-4 py-2 font-mono font-bold text-orange-300 hover:bg-orange-300 hover:text-black"
+            className="rounded-md border-4 border-orange-300 px-6 py-3 font-mono font-bold text-orange-300 transition-colors duration-300 hover:bg-orange-300 hover:text-black"
             onClick={scrollToContact}
           >
             Contact Me
           </button>
         </div>
       </div>
-      <div>
-        <img src={HeaderImage} alt="self" className="h-auto grayscale" />
+
+      <div className="mb-10 md:mb-0">
+        <img
+          src={HeaderImage}
+          alt="self"
+          className="h-auto w-32 min-w-72 rounded-full grayscale sm:w-48 lg:w-auto"
+        />
       </div>
     </div>
   );
