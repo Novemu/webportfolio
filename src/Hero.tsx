@@ -1,6 +1,10 @@
 import HeaderImage from "./SVGImages/self.png";
 
-export function Hero() {
+export type HeroProps = {
+  scrollToContact: () => void;
+};
+
+export function Hero({ scrollToContact }: HeroProps) {
   return (
     <div className="ml-44 mr-20 flex items-center justify-between">
       <div className="flex flex-col items-center">
@@ -21,7 +25,10 @@ export function Hero() {
           </p>
         </div>
         <div className="self-start">
-          <button className="mt-5 rounded-md border-4 border-solid border-orange-300 px-4 py-2 font-mono font-bold text-orange-300 hover:bg-orange-300 hover:text-black">
+          <button
+            className="mt-5 rounded-md border-4 border-solid border-orange-300 px-4 py-2 font-mono font-bold text-orange-300 hover:bg-orange-300 hover:text-black"
+            onClick={scrollToContact}
+          >
             Contact Me
           </button>
         </div>

@@ -37,7 +37,7 @@ function App() {
         scrollToContact={scrollToContact}
       />
       <div className="mt-14 h-screen shadow-2xl shadow-zinc-700">
-        <Hero />
+        <Hero scrollToContact={scrollToContact} />
       </div>
       <div ref={aboutRef}></div>
       <About />
