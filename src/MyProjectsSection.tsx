@@ -6,12 +6,10 @@ import { ProjectsCard } from "./ProjectsCard";
 export function MyProjectsSection() {
   return (
     <>
-      <div className="flex justify-center">
-        <h1 className="mb-10 mt-28 flex justify-center font-playFair text-7xl font-bold text-white">
-          Projects
-        </h1>
+      <div className="mb-10 mt-28 flex justify-center font-playFair text-5xl font-bold text-white sm:text-6xl md:text-7xl">
+        Projects
       </div>
-      <div className="mx-10 flex justify-center space-x-10">
+      <div className="mx-10 flex flex-wrap justify-center gap-6">
         <ProjectsCard
           websiteLink="https://anthonysgamehub.netlify.app/"
           websiteDescription="GameHub: Uses CheapShark API to display and sort game deals from
