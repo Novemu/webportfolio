@@ -27,36 +27,54 @@ export function ContactForm() {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <div className="mt-24 flex flex-col items-center justify-between">
-        <div>
-          <div className="flex">
-            <div className="mr-24 flex flex-col text-white has-[:focus]:text-orange-300">
-              <label className="mb-2 self-start text-xl">Name</label>
+    <form ref={form} onSubmit={sendEmail} className="mx-auto w-full max-w-2xl">
+      <div className="mt-5 flex flex-col items-center md:mt-24">
+        <div className="w-full px-4 sm:px-0">
+          <div className="flex flex-col md:flex-row md:justify-between">
+            <div className="mb-8 w-full md:mb-0 md:mr-8 md:w-1/2">
+              <label
+                className="mb-2 block text-xl text-white"
+                htmlFor="user_name"
+              >
+                Name
+              </label>
               <input
-                className="border-b border-white bg-transparent pb-2 pr-20 text-xl caret-orange-300 focus:border-orange-300 focus:placeholder-transparent focus:outline-none"
+                id="user_name"
+                className="w-full border-b border-white bg-transparent pb-2 text-xl caret-orange-300 focus:border-orange-300 focus:placeholder-transparent focus:outline-none"
                 name="user_name"
                 placeholder="Enter Your Name"
+                aria-label="Enter your name"
               />
             </div>
 
-            <div className="flex flex-col text-white has-[:focus]:text-orange-300">
-              <label className="mb-2 self-start text-xl">Email Adress</label>
+            <div className="w-full md:w-1/2">
+              <label
+                className="mb-2 block text-xl text-white"
+                htmlFor="user_email"
+              >
+                Email Address
+              </label>
               <input
-                className="border-b border-white bg-transparent pb-2 pr-20 text-xl caret-orange-300 focus:border-orange-300 focus:placeholder-transparent focus:outline-none"
+                id="user_email"
+                className="w-full border-b border-white bg-transparent pb-2 text-xl caret-orange-300 focus:border-orange-300 focus:placeholder-transparent focus:outline-none"
                 type="email"
                 name="user_email"
-                placeholder="Enter Your Email Adress"
+                placeholder="Enter Your Email Address"
+                aria-label="Enter your email address"
               />
             </div>
           </div>
 
-          <div className="mt-14 flex flex-col text-white has-[:focus]:text-orange-300">
-            <label className="mb-2 self-start text-xl">Your Message</label>
+          <div className="mt-10">
+            <label className="mb-2 block text-xl text-white" htmlFor="message">
+              Your Message
+            </label>
             <textarea
-              className="border-b border-white bg-transparent pb-2 pr-20 text-xl caret-orange-300 focus:border-orange-300 focus:placeholder-transparent focus:outline-none"
+              id="message"
+              className="w-full border-b border-white bg-transparent pb-2 text-xl caret-orange-300 focus:border-orange-300 focus:placeholder-transparent focus:outline-none"
               name="message"
               placeholder="Type your message here... Feel free to reach out or share your thoughts, questions, and feedback."
+              aria-label="Type your message here"
             />
           </div>
         </div>
