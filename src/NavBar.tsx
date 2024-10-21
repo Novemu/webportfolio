@@ -3,9 +3,14 @@ import { AntSVG } from "./SVGImages/AntSVG";
 export type NavBarProps = {
   scrollToAbout: () => void;
   scrollToProjects: () => void;
+  scrollToContact: () => void;
 };
 
-export function NavBar({ scrollToAbout, scrollToProjects }: NavBarProps) {
+export function NavBar({
+  scrollToAbout,
+  scrollToProjects,
+  scrollToContact,
+}: NavBarProps) {
   return (
     <nav className="sticky top-0 z-50 mt-5 flex items-center bg-zinc-800 pb-5 pt-5">
       <div className="absolute left-20">
@@ -35,6 +40,7 @@ export function NavBar({ scrollToAbout, scrollToProjects }: NavBarProps) {
           <a
             href="#contact"
             className="cursor-pointer text-gray-400 hover:font-bold hover:text-white"
+            onClick={scrollToContact}
           >
             Contact
           </a>
