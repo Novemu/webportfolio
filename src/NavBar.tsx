@@ -16,10 +16,14 @@ export function NavBar({
   scrollToContact,
   scrollToHero,
 }: NavBarProps) {
+  function scrollToMobileView(whereToScroll: () => void) {
+    setOpen(false);
+    whereToScroll();
+  }
   const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <nav className="sticky top-0 z-50 mt-5 flex items-center justify-between bg-zinc-800 pb-5 pt-5">
+      <nav className="top-0 z-50 mt-5 flex items-center justify-between bg-zinc-800 pb-5 pt-5 md:sticky">
         <div
           className="ml-10 hover:cursor-pointer md:ml-20"
           onClick={scrollToHero}
@@ -66,7 +70,7 @@ export function NavBar({
             <a
               href="#about"
               className="block cursor-pointer border-b border-b-orange-300 p-2 text-center text-gray-400 hover:font-bold hover:text-white"
-              onClick={scrollToAbout}
+              onClick={() => scrollToMobileView(scrollToAbout)}
             >
               About
             </a>
@@ -75,7 +79,7 @@ export function NavBar({
             <a
               href="#portfolio"
               className="block cursor-pointer border-b border-b-orange-300 p-2 text-center text-gray-400 hover:font-bold hover:text-white"
-              onClick={scrollToProjects}
+              onClick={() => scrollToMobileView(scrollToProjects)}
             >
               Projects
             </a>
@@ -84,7 +88,7 @@ export function NavBar({
             <a
               href="#contact"
               className="block cursor-pointer border-b border-b-orange-300 p-2 text-center text-gray-400 hover:font-bold hover:text-white"
-              onClick={scrollToContact}
+              onClick={() => scrollToMobileView(scrollToContact)}
             >
               Contact
             </a>
