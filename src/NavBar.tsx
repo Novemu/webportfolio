@@ -4,16 +4,21 @@ export type NavBarProps = {
   scrollToAbout: () => void;
   scrollToProjects: () => void;
   scrollToContact: () => void;
+  scrollToHero: () => void;
 };
 
 export function NavBar({
   scrollToAbout,
   scrollToProjects,
   scrollToContact,
+  scrollToHero,
 }: NavBarProps) {
   return (
     <nav className="sticky top-0 z-50 mt-5 flex items-center bg-zinc-800 pb-5 pt-5">
-      <div className="absolute left-20">
+      <div
+        className="absolute left-20 hover:cursor-pointer"
+        onClick={scrollToHero}
+      >
         <AntSVG />
       </div>
 
