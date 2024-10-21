@@ -10,6 +10,7 @@ function App() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
 
   const scrollToAbout = () => {
     if (aboutRef.current) {
@@ -29,12 +30,20 @@ function App() {
     }
   };
 
+  const scrollToHero = () => {
+    if (heroRef.current) {
+      heroRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
+      <div ref={heroRef}></div>
       <NavBar
         scrollToAbout={scrollToAbout}
         scrollToProjects={scrollToProjects}
         scrollToContact={scrollToContact}
+        scrollToHero={scrollToHero}
       />
       <div className="mt-14 h-screen shadow-2xl shadow-zinc-700">
         <Hero scrollToContact={scrollToContact} />
