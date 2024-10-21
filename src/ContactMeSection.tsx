@@ -15,10 +15,10 @@ export function ContactMeSection() {
       <ContactForm />
       <div className="flex items-center justify-between">
         <div className="mt-20 flex-1 border-2 border-orange-300"></div>
-        <h1 className="mt-28 flex justify-center px-5 font-playFair text-7xl font-bold text-white">
+        <h1 className="mt-20 flex justify-center px-5 font-playFair text-7xl font-bold text-white">
           <LinkedInSVG /> <GitHubSVG />
         </h1>
-        <div className="mt-28 flex-1 border-2 border-orange-300"></div>
+        <div className="mb-7 mt-28 flex-1 border-2 border-orange-300"></div>
       </div>
     </>
   );
