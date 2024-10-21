@@ -9,6 +9,7 @@ import { useRef } from "react";
 function App() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   const scrollToAbout = () => {
     if (aboutRef.current) {
@@ -22,11 +23,18 @@ function App() {
     }
   };
 
+  const scrollToContact = () => {
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <NavBar
         scrollToAbout={scrollToAbout}
         scrollToProjects={scrollToProjects}
+        scrollToContact={scrollToContact}
       />
       <div className="mt-14 h-screen shadow-2xl shadow-zinc-700">
         <Hero />
@@ -36,6 +44,7 @@ function App() {
       <MySkillsSection />
       <div ref={projectsRef}></div>
       <MyProjectsSection />
+      <div ref={contactRef}></div>
       <ContactMeSection />
     </>
   );
