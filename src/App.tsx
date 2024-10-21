@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className="h-screen shadow-2xl shadow-zinc-700">
+      <div className="mt-14 h-screen shadow-2xl shadow-zinc-700">
         <Hero />
       </div>
       <About />
