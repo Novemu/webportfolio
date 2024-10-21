@@ -28,35 +28,35 @@ export function ContactForm() {
 
   return (
     <form ref={form} onSubmit={sendEmail} className="mx-auto w-full max-w-2xl">
-      <div className="mt-5 flex flex-col items-center md:mt-24">
+      <div className="mt-24 flex flex-col items-center">
         <div className="w-full px-4 sm:px-0">
           <div className="flex flex-col md:flex-row md:justify-between">
-            <div className="mb-8 w-full md:mb-0 md:mr-8 md:w-1/2">
+            <div className="group mb-8 w-full md:mb-0 md:mr-8 md:w-1/2">
               <label
-                className="mb-2 block text-xl text-white"
+                className="mb-2 block text-xl text-white group-focus-within:text-orange-300"
                 htmlFor="user_name"
               >
                 Name
               </label>
               <input
                 id="user_name"
-                className="w-full border-b border-white bg-transparent pb-2 text-xl caret-orange-300 focus:border-orange-300 focus:placeholder-transparent focus:outline-none"
+                className="w-full border-b border-white bg-transparent pb-2 text-xl text-white caret-orange-300 focus:border-orange-300 focus:text-orange-300 focus:placeholder-transparent focus:outline-none"
                 name="user_name"
                 placeholder="Enter Your Name"
                 aria-label="Enter your name"
               />
             </div>
 
-            <div className="w-full md:w-1/2">
+            <div className="group w-full md:w-1/2">
               <label
-                className="mb-2 block text-xl text-white"
+                className="mb-2 block text-xl text-white group-focus-within:text-orange-300"
                 htmlFor="user_email"
               >
                 Email Address
               </label>
               <input
                 id="user_email"
-                className="w-full border-b border-white bg-transparent pb-2 text-xl caret-orange-300 focus:border-orange-300 focus:placeholder-transparent focus:outline-none"
+                className="w-full border-b border-white bg-transparent pb-2 text-xl text-white caret-orange-300 focus:border-orange-300 focus:text-orange-300 focus:placeholder-transparent focus:outline-none"
                 type="email"
                 name="user_email"
                 placeholder="Enter Your Email Address"
@@ -65,13 +65,16 @@ export function ContactForm() {
             </div>
           </div>
 
-          <div className="mt-10">
-            <label className="mb-2 block text-xl text-white" htmlFor="message">
+          <div className="group mt-10">
+            <label
+              className="mb-2 block text-xl text-white group-focus-within:text-orange-300"
+              htmlFor="message"
+            >
               Your Message
             </label>
             <textarea
               id="message"
-              className="w-full border-b border-white bg-transparent pb-2 text-xl caret-orange-300 focus:border-orange-300 focus:placeholder-transparent focus:outline-none"
+              className="w-full border-b border-white bg-transparent pb-2 text-xl text-white caret-orange-300 focus:border-orange-300 focus:text-orange-300 focus:placeholder-transparent focus:outline-none"
               name="message"
               placeholder="Type your message here... Feel free to reach out or share your thoughts, questions, and feedback."
               aria-label="Type your message here"
