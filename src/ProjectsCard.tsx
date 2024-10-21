@@ -10,7 +10,7 @@ export function ProjectsCard({
   projectImage,
 }: ProjectsCardProps) {
   return (
-    <div className="group relative flex h-72 w-1/3 flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-zinc-600 bg-zinc-700">
+    <div className="group relative flex h-72 min-w-72 max-w-72 flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-zinc-600 bg-zinc-700 md:w-1/3 md:max-w-max">
       <img
         src={projectImage}
         alt="Project Image"
