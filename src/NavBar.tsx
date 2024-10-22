@@ -34,7 +34,6 @@ export function NavBar({
         <ul className="hidden text-xl md:mr-20 md:flex md:grow md:justify-center md:space-x-5">
           <li>
             <a
-              href="#about"
               className="cursor-pointer text-gray-400 hover:font-bold hover:text-white"
               onClick={scrollToAbout}
             >
@@ -43,7 +42,6 @@ export function NavBar({
           </li>
           <li>
             <a
-              href="#portfolio"
               className="cursor-pointer text-gray-400 hover:font-bold hover:text-white"
               onClick={scrollToProjects}
             >
@@ -52,7 +50,6 @@ export function NavBar({
           </li>
           <li>
             <a
-              href="#contact"
               className="cursor-pointer text-gray-400 hover:font-bold hover:text-white"
               onClick={scrollToContact}
             >
